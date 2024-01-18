@@ -8,5 +8,5 @@ tasks:
     command: |
       echo "alias sh='/bin/bash'" >> ~/.profile
       source ~/.profile
-      docker run -p 2881:2881 --name obstandalone -e MINI_MODE=1 -d oceanbase/oceanbase-ce
+      docker run -p 2881:2881 --name obstandalone -e MINI_MODE=1 -e FASTBOOT=true -d oceanbase/oceanbase-ce
       bash /workspace/ob-example/tools/gitpod/init.sh
